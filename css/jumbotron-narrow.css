@@ -1,0 +1,484 @@
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.5em;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.head,
+.row,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+h1,h2,h3, 
+a, a:visited, a:hover,
+.text-green {
+  color: #009b77;
+}
+
+h1 {font-size: 350%}
+h2 {font-size: 200%}
+h3 {font-size: 200%}
+h4 {font-size: 150%}
+h5 {font-size: 125%}
+
+p {
+  text-align: justify;
+}
+
+.middle {
+  text-align: center;
+}
+
+/*
+.first {
+  padding-left: 0
+}
+*/
+.spacer {
+  height:40px;
+}
+
+.last-update, .links {
+  font-size: 0.6em
+}
+
+.links a:link, .links a:visited, .links a:active {
+  color:#333;
+}
+
+.links a:hover {
+  color:#009b77;
+}
+
+.name h1 { 
+  margin-top: 0;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.slash {
+  display: inline-block;
+  width: 10px;
+  height: 22px;
+  -webkit-transform: skew(145deg);
+     -moz-transform: skew(145deg);
+       -o-transform: skew(145deg);
+  transform: skew(145deg);       
+  background: #009b77;
+}
+
+.row.text {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.education {
+  margin-top: 30px;
+}
+.education .row {
+  margin-top: 20px;
+}
+
+.education .col-sm-4 {
+  padding-left: 0;
+}
+
+.preview {
+  text-align: center;
+}
+
+.preview h4 {
+  margin-bottom: 0;
+}
+
+.skills h4 {
+  color: #009b77;
+}
+
+.skills, .works {
+  margin-top: 30px;
+}
+
+.skills ul {
+  list-style-type: none;
+  padding:0;
+  margin-bottom: 0;
+}
+.skills li {
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.skills .col-sm-6 {
+  padding-left: 0;
+}
+
+.skills .rating {
+  position: absolute;
+  left:0;
+  padding-left: 150px;
+}
+
+.skills .rating .slash {
+  width:5px;
+  height:12px;
+  margin-left: 3px;
+}
+
+.works h3 {
+  text-align: center;
+  margin-top:0;
+}
+.works .post {
+  padding: 11px;
+  border: 1px #dddddd solid;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.works .post h4 {
+  margin-top: 10px;
+  font-size: 120%;
+  text-align: left;
+  color:#009b77;
+  min-height: 38px;
+}
+
+.works .post p {
+  font-size: 85%;  
+  text-align: left;
+}
+
+.signature {
+  background: url('../img/signature.png') no-repeat center;
+  height:54px;
+  width:100%;
+  margin-bottom: 10px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  text-align: center;
+  /*border-top: 1px solid #e5e5e5;*/
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* TIMELINE */
+.timeline{
+  /*width: 600px;*/
+  margin:0 auto;
+  margin-top:30px;
+}
+
+.timeline .post{
+  width: 310px; /*271px;*/
+  margin: 0 0 10px 0;
+  float: left;
+}
+
+.timeline .post.last{
+  margin-bottom: 0;
+}
+
+.timeline .post .inner{
+  position: relative;
+  /*width: 247px;*/
+  padding: 11px;
+  border: 1px #dddddd solid;
+  background-color:#fff;
+  min-height:37px;
+  word-wrap:break-word;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  /*
+  -webkit-box-shadow:  0px 1px 1px 0px #adadad;
+  -moz-box-shadow:  0px 1px 1px 0px #adadad;
+  box-shadow:  0px 1px 1px 0px #adadad;*/
+}
+
+.timeline .post.right{
+  float: right;
+}
+
+.timeline .item .timestamp{
+  display: none;
+}
+
+.timeline .post .footer .date-time {
+  font-size: 12px;
+  color: #777;
+}
+
+.timeline .post h3{
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.timeline .post h4{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.3;
+  color:#ababab;
+}
+
+.timeline .post .caption{
+  color: #9d9d9d;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.timeline .post .body{
+  margin: 10px 0;
+  text-align: center;  
+}
+
+.timeline .post .body img{
+  max-width: 286px;
+  margin-bottom:20px;
+}
+
+.timeline .post .body .icon {
+  margin-right: 10px;
+  font-size: 26px;
+  color:#ababab;
+}
+
+.timeline .post .text{
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.timeline .post .date{
+  color: #6a6a6a;
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  top: 19px;
+  display: block;
+  width: 54px;
+  height: 21px;
+  line-height: 20px;
+}
+
+.timeline .post.left .date{
+  background: transparent url(../img/tab-left.png) no-repeat right;
+  right: -54px;
+}
+
+.timeline .post.right .date{
+  background: transparent url(../img/tab-right.png) no-repeat left;
+  left: -54px;
+}
+
+.marker {
+  position: absolute;
+  top: 19px;
+  display: block;
+
+  /*
+  background: rgb(248,248,248);
+  padding: 6px 10px;*/
+  font-weight: 600;
+  text-align: left;
+}
+
+.timeline .post.left .marker {
+  right: -1px;
+}
+
+.timeline .post.right .marker {
+  left: -1px;
+}
+
+.left .marker:before,
+.right .marker:before {
+  position: absolute;
+  top: 50%;
+  right: -36px;
+  content: ' ';
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin-top: -10px;
+  background: #777;
+  border-radius: 10px;
+  border: 8px solid #777;
+  z-index: 10;
+    -webkit-box-shadow:  0px 0px 0px 4px #fff;
+  -moz-box-shadow:  0px 0px 0px 4px #fff;
+  box-shadow:  0px 0px 0px 4px #fff;
+}
+
+.right .marker:before {
+  left: -36px;
+}
+
+.left .marker:after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -10px;
+  border: solid transparent;
+  border-left-color: #dddddd;
+  border-width: 10px;
+  pointer-events: none;
+}
+
+.right .marker:after {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -10px;
+  border: solid transparent;
+  border-right-color: #dddddd;
+  border-width: 10px;
+  pointer-events: none;
+}
+
+.timeline .year-marker {
+  float: left;
+  width: 120px;
+  margin: 50px 0 15px 0;
+}
+
+.timeline .year-marker.top{
+  margin-top: 0;
+}
+
+.timeline .year-marker .inner{
+  width: 76px;
+  height: 26px;
+  padding: 2px;
+  background-color: #FFF;
+  margin:auto;
+}
+
+.timeline .year-marker .inner.large {
+  width:120px;
+}
+
+.timeline .year-marker .inner.medium {
+  width:100px;
+}
+
+.timeline .year-marker .inner2{
+  background-color: #009b77;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.timeline .year{
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  height: 26px;
+  line-height: 26px;
+}
+
+.line-container{
+  width: 4px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+.isotope .line{
+  margin: 0 auto;
+  background-color: #b3b6b8;
+  display: block;
+  float: left;
+  height: 100%;
+  /*left: 298px;*/
+  width: 4px;
+  position: absolute;
+}
+
+/**** Isotope Filtering ****/
+.isotope-item {
+  z-index: 2;
+}
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property:    -moz-transform, opacity;
+  -ms-transition-property:     -ms-transform, opacity;
+  -o-transition-property:         top, left, opacity;
+  transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s;
+}
+
+/* Customize Timeline */
+@media (min-width: 320px) and (max-width:767px) {
+  .isotope .isotope-item {
+    
+  }
+}
+@media (min-width: 768px) and (max-width:1023px) {
+  
+}
