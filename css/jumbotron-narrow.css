@@ -42,8 +42,27 @@ p {
   height:40px;
 }
 
+.divider {
+  margin-top: 30px;
+  margin-bottom: 80px;
+  margin-left:20%;
+  margin-right:20%;
+  height: 2px;
+  background-color: #cccccc;
+}
+
+.small-divider {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left:40%;
+  margin-right:40%;
+  height: 2px;
+  background-color: #cccccc;
+}
+
 .last-update, .links {
-  font-size: 0.6em
+  font-size: 0.6em;
+  text-align:right;
 }
 
 .links a:link, .links a:visited, .links a:active {
@@ -89,6 +108,13 @@ p {
   padding-left: 0;
 }
 
+/*
+@media (min-width: 768px) {
+  .education .coursework {
+    height: 336px;
+  }
+}
+*/
 .preview {
   text-align: center;
 }
@@ -101,7 +127,7 @@ p {
   color: #009b77;
 }
 
-.skills, .works {
+.skills, .works, .mt-30 {
   margin-top: 30px;
 }
 
@@ -130,6 +156,72 @@ p {
   height:12px;
   margin-left: 3px;
 }
+
+@media (max-width: 767px) {
+  .skills .skill-col {
+    margin-bottom: 40px;
+  }
+}
+
+.career {
+  background-color: #f6f6f6;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 30px;
+}
+
+.career-small {
+  background-color: #f6f6f6;
+  padding:15px;
+  padding-top: 30px;
+}
+
+.career-logo {
+  text-align: center;
+}
+
+.career-logo a:hover {
+  text-decoration: none;
+}
+/*
+.career-description a,
+.career-description a:hover {
+  color:#777777;
+}*/
+
+.career-screen,
+.career-fellow {
+  text-align: center;
+}
+
+@media(max-width: 767px) {
+  .career-screen,
+  .career-fellow {
+      margin-bottom: 30px;
+  }
+}
+
+.career-screen p {
+  text-align: center;
+}
+
+.career-screen a.lavysh,
+.career-screen a.lavysh:hover {
+  color:#ff6600;
+  text-decoration: none;
+}
+
+.career-screen a.fyne,
+.career-screen a.fyne:hover {
+  color:#e9536b;
+  text-decoration: none;
+}
+/*
+.career-screen small a {
+  color:#777777;
+}*/
 
 .works h3 {
   text-align: center;
@@ -474,11 +566,17 @@ p {
 }
 
 /* Customize Timeline */
-@media (min-width: 320px) and (max-width:767px) {
+@media (max-width:767px) {
   .isotope .isotope-item {
-    
+    /*
+    transform:none !important;
+    position:relative !important;
+    display: block;
+    float:none;
+    */
   }
 }
+
 @media (min-width: 768px) and (max-width:1023px) {
   
 }

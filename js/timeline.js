@@ -25,7 +25,7 @@ $(function() {
 			$('.timeline').isotope({
 				itemSelector : '.item',
 				transformsEnabled: true,
-				layoutMode: 'spineAlign',
+				layoutMode: $(window).width() > 767 ? 'spineAlign' : 'vertical',
 				spineAlign:{
 					gutterWidth: 56
 				},
@@ -38,8 +38,8 @@ $(function() {
 				sortAscending: false,
 				itemPositionDataEnabled: true
 			});
-			adjustLine();
 
+			adjustLine();
 		});
 
 /*
@@ -88,6 +88,7 @@ $(function() {
 	}
 
 	$('.timeline').resize(function(){ // uses "jQuery resize event" plugin
+		$('.timeline').isotope({layoutMode:$(window).width() > 767 ? 'spineAlign' : 'vertical'});
 		adjustLine();
 	});
 });
@@ -164,6 +165,64 @@ $.Isotope.prototype._spineAlignGetContainerSize = function() {
 	return size;
 };
 $.Isotope.prototype._spineAlignResizeChanged = function() {
+	return true;
+};
+
+
+/*
+ * Isotope custom layout mode spineAlign
+ */
+$.Isotope.prototype._verticalReset = function() {
+	this.spineAlign = {
+		col: 0,
+		lastY: -60
+	};
+};
+$.Isotope.prototype._verticalLayout = function( $elems ) {
+	var instance = this,
+		props = this.spineAlign,
+		gutterWidth = 0,
+		centerX = Math.round(this.element.width() / 2);
+
+	$elems.each(function(i, val){
+		var $this = $(this);
+		$this.removeClass('last').removeClass('top');
+		if (i == $elems.length - 1)
+			$this.addClass('last');
+		var x, y;
+		var width = $this.width();
+
+		if ($this.hasClass('year-marker')){
+			x = centerX - (width / 2);
+			y = props.col;
+			if (y == 0) $this.addClass('top');
+			props.col += $this.outerHeight(true);
+		}
+		else{
+			x = centerX - (width / 2)
+			y = props.col;
+
+			if (y - props.lastY <= 60){
+				var extraSpacing = 60 - Math.abs(y - props.lastY);
+				$this.find('.inner').css('marginTop', extraSpacing);
+				props.lastY = y + extraSpacing;
+			}
+			else{
+				$this.find('.inner').css('marginTop', 20);
+				props.lastY = y;
+			}
+			props.col += $this.outerHeight(true);
+		}
+
+		instance._pushPosition( $this, x, y );
+	});
+};
+$.Isotope.prototype._verticalGetContainerSize = function() {
+	var size = {};
+	size.height = this.spineAlign.col;
+	return size;
+};
+$.Isotope.prototype._verticalResizeChanged = function() {
 	return true;
 };
 
