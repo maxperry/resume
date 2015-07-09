@@ -1,3 +1,9 @@
+@media print {
+  html, body {
+    display: none;  /* respect nature */
+  }
+}
+
 /* Space out content a bit */
 body {
   padding-top: 20px;
