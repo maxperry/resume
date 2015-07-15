@@ -114,19 +114,22 @@ p {
   padding-left: 0;
 }
 
-/*
-@media (min-width: 768px) {
-  .education .coursework {
-    height: 336px;
-  }
-}
-*/
 .preview {
   text-align: center;
 }
 
 .preview h4 {
   margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .education .coursework .spacing{
+    display: none;
+  }
+
+  .preview img {
+    width:230px;
+  }
 }
 
 .skills h4 {
@@ -207,6 +210,11 @@ p {
   .career-fellow {
       margin-bottom: 30px;
   }
+
+  .career-screen img,
+  .career-fellow img{
+      width:230px;
+  }
 }
 
 .career-screen p {
@@ -252,6 +260,15 @@ p {
 .works .post p {
   font-size: 85%;  
   text-align: left;
+}
+
+@media (max-width: 767px) {
+  .row.works {
+    margin-top: 0;
+  }
+  .row.works div {
+    margin-top:30px;
+  }
 }
 
 .signature {
